@@ -1,0 +1,42 @@
+html, body{
+    margin: 5px;
+    padding: 5px;
+}
+
+body{
+    font-display: times new roman;
+    background-color: pink;
+    line-height: 1.65;
+    padding-bottom: 100px;
+}
+/*Latihan 1*/
+.container-satu{
+    width: 800px;
+    margin: 50px auto;
+    background-color: lightcyan;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+.sidebarSatu{
+    flex-grow: 0px;
+    flex-shrink: 0;
+    flex-basis: 100px;
+    margin-left: 20px;
+    margin-right: 50px;
+     
+}
+.kolomUtama{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sidebarDua{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    margin-left: 20px;
+    margin-right: 20px;   
+}
