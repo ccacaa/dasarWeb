@@ -1,6 +1,6 @@
 <?php
 
-class AnimalEncap
+class Animal
 {
     public $name;
     protected $age;
@@ -29,7 +29,7 @@ class AnimalEncap
     }
 }
 
-$animal = new AnimalEncap("Dog", 3, "Brown");
+$animal = new Animal("Dog", 3, "Brown");
 
 echo "Name: " . $animal->name . "<br>";
 echo "Age: " . $animal->getAge() . "<br>";
