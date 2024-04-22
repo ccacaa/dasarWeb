@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
     header('Content-Type: application/json');
 
@@ -13,4 +14,21 @@
     } else {
         exit(json_encode(['error' => 'No CSRF token.']));
     }
+=======
+<?php
+    header('Content-Type: application/json');
+
+    if(empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+
+    $headers = apache_request_headers();
+    if(isset($headers['Csrf-Token'])) {
+        if($headers['Csrf-Token'] !== $_SESSION['csrf_token']) {
+            exit(json_encode(['error' => 'Wrong CSRF Token.']));
+        }
+    } else {
+        exit(json_encode(['error' => 'No CSRF token.']));
+    }
+>>>>>>> e22765833210c7ed994a68d514f436d60f4db267
 ?>
