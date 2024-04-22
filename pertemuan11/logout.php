@@ -1,7 +1,6 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() == PHP_SESSION_NONE)
     session_start();
-}
-session_destroy();
 
-header("location:index.php");
+session_destroy();
+header("location:login.php");
